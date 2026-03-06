@@ -1,0 +1,26 @@
+[project]
+name = "spotlight-saver"
+version = "0.1.0"
+description = "A cli tool to save the Windows Spotlight wallpaper."
+readme = "README.md"
+authors = [
+    { name = "SeshuTarapatla", email = "seshu.tarapatla@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=12.1.1",
+    "rich>=14.3.3",
+    "typer>=0.24.1",
+]
+
+[project.scripts]
+spotlight = "spotlight_saver:spotlight"
+
+[build-system]
+requires = ["uv_build>=0.10.8,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]
