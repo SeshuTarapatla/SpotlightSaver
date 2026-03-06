@@ -73,10 +73,7 @@ This will extract the current Windows Spotlight wallpaper and save it to:
 
 ```bash
 # Install development dependencies
-pip install -e ".[dev]"
-
-# Run tests (if available)
-# TODO: Add test instructions
+uv sync --dev
 ```
 
 ## License
