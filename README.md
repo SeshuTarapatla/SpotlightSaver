@@ -24,16 +24,29 @@ cd SpotlightSaver
 pip install .
 ```
 
-### Install with pip
+### Install with pip/uv
 
 ```bash
 pip install git+https://github.com/SeshuTarapatla/SpotlightSaver.git
 ```
 
+or
+
+```bash
+uv pip install git+https://github.com/SeshuTarapatla/SpotlightSaver.git
+```
+
+
+### Run without install using uvx
+
+```bash
+uvx --from git+https://github.com/SeshuTarapatla/SpotlightSaver.git spotlight
+```
+
 ## Usage
 
 ```bash
-spotlight extract
+spotlight
 ```
 
 This will extract the current Windows Spotlight wallpaper and save it to:
