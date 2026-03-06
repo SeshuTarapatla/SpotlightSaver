@@ -41,6 +41,7 @@ class Spotlight:
             console.print(
                 f"[bold blue]INFO [/] : Spolight extracted: [cyan]'{export}'[/]."
             )
+        console.print()
 
     @property
     def last_spotlight(self) -> Path | None:
