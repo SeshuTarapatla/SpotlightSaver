@@ -2,6 +2,7 @@ from datetime import datetime
 from hashlib import md5
 from pathlib import Path
 from shutil import copy2
+from subprocess import Popen
 
 from PIL import Image
 from rich.console import Console
@@ -54,3 +55,8 @@ class Spotlight:
             if files:
                 self._last_spotlight = files[0]
         return self._last_spotlight
+
+    @staticmethod
+    def explorer():
+        console.print(f"[bold blue]INFO [/]: Opening spotlight save directory [bold yellow]`{SAVE_DIR}`[/]")
+        Popen(["explorer.exe", SAVE_DIR])
