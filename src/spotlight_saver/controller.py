@@ -31,7 +31,7 @@ class Spotlight:
             self.last_spotlight
         ):
             console.print(
-                f"[bold blue]INFO [/] : Spotlight already extracted. [magenta]'{self.last_spotlight}'[/]"
+                f"[bold blue]INFO [/] : Spotlight already extracted. [magenta]'{self.last_spotlight}'[/]\n"
             )
         else:
             export: Path = (
@@ -40,9 +40,8 @@ class Spotlight:
             )
             copy2(self.current_spotlight, export)
             console.print(
-                f"[bold blue]INFO [/] : Spolight extracted: [cyan]'{export}'[/]."
+                f"[bold blue]INFO [/] : Spolight extracted: [cyan]'{export}'[/].\n"
             )
-        console.print()
 
     @property
     def last_spotlight(self) -> Path | None:
@@ -58,5 +57,5 @@ class Spotlight:
 
     @staticmethod
     def explorer():
-        console.print(f"[bold blue]INFO [/]: Opening spotlight save directory [bold yellow]`{SAVE_DIR}`[/]")
+        console.print(f"[bold blue]INFO [/]: Opening spotlight save directory [bold yellow]`{SAVE_DIR}`[/]\n")
         Popen(["explorer.exe", SAVE_DIR])
